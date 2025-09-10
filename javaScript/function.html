@@ -4,26 +4,44 @@
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Function</title>
+    <style>
+        .adi{
+            border: 2px solid red;
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+
+        }
+    </style>
 </head>
 <body>
+    <div class="adi">
+        <button onclick="abes()">
+            Click
+        </button>
+        <p id="aaa"></p>
+    </div>
     <script>
         // function abes()
         // {
         //     document.write("Hi we are student of abes");
         // }
         // abes();
-        var a=10;
-        var b=5;
-        function add()
-        {
-            document.writeln(`Sum is ${a+b}`);
+        // var a=10;
+        // var b=5;
+        // function add()
+        // {
+        //     document.writeln(`Sum is ${a+b}`);
+        // }
+        // function sub()
+        // {
+        //     document.writeln(`Difference is ${a-b}`);
+        // }
+        // add();
+        // sub();
+        function abes(){
+            document.getElementById("aaa").innerHTML="Hello";
         }
-        function sub()
-        {
-            document.writeln(`Difference is ${a-b}`);
-        }
-        add();
-        sub();
     </script>
 </body>
 </html>
