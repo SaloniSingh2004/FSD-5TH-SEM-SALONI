@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Function</title>
     <style>
-        .adi{
+        /* .adi{
             border: 2px solid red;
             height: 200px;
             width: 200px;
             background-color: pink;
 
-        }
+        } */
     </style>
 </head>
-<body>
-    <div class="adi">
+<body id="adi">
+    <!-- <div class="adi">
         <button onclick="abes()">
             Click
         </button>
         <p id="aaa"></p>
-    </div>
+    </div> -->
+
+    <button onclick="red()">RED</button>
+    <button onclick="blue()">BLUE</button>
+    <button onclick="green()">GREEN</button>
+    <!-- <p id="adi">Hello</p> -->
     <script>
         // function abes()
         // {
@@ -39,9 +44,19 @@
         // }
         // add();
         // sub();
-        function abes(){
-            document.getElementById("aaa").innerHTML="Hello";
+        // function abes(){
+        //     document.getElementById("aaa").innerHTML="Hello";
+        // }
+        function red(){
+            document.getElementById("adi").style.backgroundColor="red";       
         }
+        function blue(){
+            document.getElementById("adi").style.backgroundColor="blue";        
+        }
+        function green(){
+            document.getElementById("adi").style.backgroundColor="green";        
+        }
+
     </script>
 </body>
 </html>
