@@ -6,64 +6,132 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    .hidden {
-      display: none;
+    .bigCard {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: rgb(199, 235, 144);
+      border: 2px solid black;
+      border-radius: 16px;
+      padding: 30px;
+      width: 850px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      gap: 40px;
+    }
+    .profile {
+      text-align: center;
+      flex: 1;
     }
     .profile img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
+      border: 2px solid black;
     }
-    .profile {
-      margin-top: 30px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table td {
+      padding: 8px;
+      border: 1px solid #333;
+      text-align: left;
+      background: white;
+    }
+    .formBox {
+      flex: 1;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+    }
+    .formBox input, .formBox select {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #333;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 18px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: black;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <div id="formSection">
-    <h2>Enter Your Details</h2>
-    <label>Name: </label>
-    <input type="text" id="name"><br><br>
+  <!-- Big Card -->
+  <div class="bigCard">
+    
+    <!-- Profile Section -->
+    <div class="profile">
+      <img src="mypic.jpg" alt="Profile Image">
+      <h2 id="displayName">Your Name (B.Tech IT)</h2>
+      <table>
+        <tr>
+          <td><b>Language</b></td>
+          <td id="displayLanguage">-</td>
+        </tr>
+        <tr>
+          <td><b>Address</b></td>
+          <td id="displayAddress">-</td>
+        </tr>
+      </table>
+    </div>
 
-    <label>Language: </label>
-    <select id="language">
-      <option value="C">C</option>
-      <option value="Java">Java</option>
-      <option value="Python">Python</option>
-    </select><br><br>
+    <!-- Form Section -->
+    <div class="formBox">
+      <h2>Enter Your Details</h2>
+      <label>Name: </label><br>
+      <input type="text" id="name"><br>
 
-    <label>Address: </label>
-    <input type="text" id="address"><br><br>
+      <label>Languages: (hold Ctrl to select multiple)</label><br>
+      <select id="language" multiple size="3">
+        <option value="C">C</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+      </select><br>
 
-    <button onclick="submitData()">Submit</button>
-  </div>
+      <label>Address: </label><br>
+      <input type="text" id="address"><br>
 
- 
-  <div id="profileSection" class="hidden profile">
-    <img src="mypic.jpg" alt="Profile Image">
-    <h2 id="displayName"></h2>
-    <p><b>Language:</b> <span id="displayLanguage"></span></p>
-    <p><b>Address:</b> <span id="displayAddress"></span></p>
+      <button onclick="submitData()">Submit</button>
+    </div>
   </div>
 
   <script>
     function submitData() {
       var name = document.getElementById("name").value;
-      var language = document.getElementById("language").value;
+      var langSelect = document.getElementById("language");
       var address = document.getElementById("address").value;
 
-   
-      document.getElementById("displayName").innerText = name + " (B.Tech IT)";
-      document.getElementById("displayLanguage").innerText = language;
-      document.getElementById("displayAddress").innerText = address;
+      // Collect multiple selected languages
+      var selectedLanguages = [];
+      for (var i = 0; i < langSelect.options.length; i++) {
+        if (langSelect.options[i].selected) {
+          selectedLanguages.push(langSelect.options[i].value);
+        }
+      }
 
-      document.getElementById("formSection").classList.add("hidden");
-      document.getElementById("profileSection").classList.remove("hidden");
+      if(name.trim() !== ""){
+        document.getElementById("displayName").innerText = name + " (B.Tech IT)";
+      }
+      document.getElementById("displayLanguage").innerText = selectedLanguages.join(", ");
+      document.getElementById("displayAddress").innerText = address;
     }
   </script>
 </body>
