@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Assignment 5_2</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        #card {
+            background-color: aquamarine;
+            width: 400px;
+            height: 500px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #card1 {
+            background-color: aquamarine;
+            width: 400px;
+            height: 500px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #card img {
+            height: 200px;
+            width: 200px;
+        }
+        #card1 img {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <div><img src="college.jpeg" alt=""></div>
+        <div><button onclick="hide()">HIDE</button></div>
+
+    </div>
+    <div id="card1">
+        <div><img src="college1.jpeg" alt=""></div>
+        <div><button onclick="change()">CHANGE</button></div>
+    </div>
+    <script>
+        function hide()
+        {
+            document.querySelector("#card img").style.display="none";
+        }
+        function change()
+        {
+            document.querySelector("#card1 img").src="college4.jpeg";
+        }
+    </script>
+</body>
+</html>

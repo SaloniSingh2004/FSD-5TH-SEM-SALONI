@@ -1,0 +1,8 @@
+#sal{
+  display: flex;
+  margin: 20px;
+  justify-content: space-evenly;
+  text-align: center;
+  font: bolder;
+
+}
