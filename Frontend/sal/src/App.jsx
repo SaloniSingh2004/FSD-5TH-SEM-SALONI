@@ -1,16 +1,18 @@
-import Count from './components/Count1'
-
+// import Count from './components/Count1'
+import React from "react"
+import Link1 from "./components/Link1";
+import Ad from "./components/Ad";
 
 function App() {
 
   return (
     <>
     <div>
-    <Count/>
+    <Ad/>
     </div>
     
     </>
   )
 }
 
-export default App
+export default App;
