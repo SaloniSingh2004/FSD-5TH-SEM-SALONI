@@ -20,8 +20,18 @@
 // });
 
 // myserver.listen(8000,()=>console.log('Server is run'));
-const fs=require('fs');
+// const fs=require('fs');
 // fs.writeFileSync("./it-a.txt","We are student of IT A");
 // fs.writeFileSync("./abes.txt","We are student of ABES");
-const result =fs.readFileSync("./it-a.txt","utf-8");
-console.log(result);
+// const result =fs.readFileSync("./it-a.txt","utf-8");
+// console.log(result);
+const fs=require('fs');
+// fs.writeFile("./ad.txt","code is very good time pass", () => { });
+fs.readFile("./ad.txt","utf-8",(err,result)=>{
+    if(err){
+        console.log("error",err);
+    }
+    else{
+        console.log(result);
+    }
+});
