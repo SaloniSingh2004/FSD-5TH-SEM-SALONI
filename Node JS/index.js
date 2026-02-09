@@ -27,11 +27,24 @@
 // console.log(result);
 const fs=require('fs');
 // fs.writeFile("./ad.txt","code is very good time pass", () => { });
-fs.readFile("./ad.txt","utf-8",(err,result)=>{
-    if(err){
-        console.log("error",err);
-    }
-    else{
-        console.log(result);
-    }
-});
+// fs.readFile("./ad.txt","utf-8",(err,result)=>{
+//     if(err){
+//         console.log("error",err);
+//     }
+//     else{
+//         console.log(result);
+//     }
+// });
+// fs.appendFileSync("./ad.txt","and I am happy");
+// fs.appendFile("./ad.txt","Node js is good",()=>{});
+// fs.cpSync("./a1.txt","./b1.txt");
+// fs.cp("./a1.txt","./b1.txt",()=>{});
+// fs.cp("./a1.txt","./b1.txt",(err)=>{
+//     if(err){
+//         console.log("Error",err);
+//     }
+//     else{
+//         console.log("File copied successfully");
+//     }
+// });
+fs.unlinkSync("./ad.txt");
