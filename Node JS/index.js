@@ -25,7 +25,7 @@
 // fs.writeFileSync("./abes.txt","We are student of ABES");
 // const result =fs.readFileSync("./it-a.txt","utf-8");
 // console.log(result);
-const fs=require('fs');
+// const fs=require('fs');
 // fs.writeFile("./ad.txt","code is very good time pass", () => { });
 // fs.readFile("./ad.txt","utf-8",(err,result)=>{
 //     if(err){
@@ -47,4 +47,34 @@ const fs=require('fs');
 //         console.log("File copied successfully");
 //     }
 // });
-fs.unlinkSync("./ad.txt");
+// fs.unlinkSync("./ad.txt");
+// const fs = require('fs').promises;
+
+// async function readFileExample() {
+//   try {
+//     const data = await fs.readFile('./a1.txt', 'utf8');
+//     console.log('File content:', data);
+//   } catch (err) {
+//     console.error('Error reading file:', err);
+//   }
+// }
+
+// readFileExample();
+// const fs = require("fs");
+
+// const data = {
+//   name: "Saloni",
+//   age: 21,
+//   course: "B.Tech",
+//   skills: ["Java", "Python", "Node.js"]
+// };
+
+// const jsonData = JSON.stringify(data, null, 2); // pretty format
+
+// fs.writeFile("data.json", jsonData, (err) => {
+//   if (err) {
+//     console.log("Error writing file", err);
+//   } else {
+//     console.log("JSON file written successfully");
+//   }
+// });
