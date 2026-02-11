@@ -78,3 +78,12 @@
 //     console.log("JSON file written successfully");
 //   }
 // });
+const os=require('os');
+console.log("platform",os.platform());
+console.log("userinfo",os.userInfo());
+console.log("CPU",os.arch());
+console.log("Free memory",os.freemem());
+console.log("Total memory",os.totalmem());
+console.log("uptime",os.uptime());
+console.log("Home Directory",os.homedir());
+console.log("Host name",os.hostname());
